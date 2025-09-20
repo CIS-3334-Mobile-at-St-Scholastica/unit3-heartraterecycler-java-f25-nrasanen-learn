@@ -78,4 +78,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAge" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHeartrate"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="369dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

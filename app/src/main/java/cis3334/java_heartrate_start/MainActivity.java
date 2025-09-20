@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setupInsertButton();            // Set up the OnClickListener for the insert button
         setupLiveDataObserver();
 
-        recyclerView = findViewById(R.id.);
+        recyclerView = findViewById(R.id.recyclerViewHeartrate);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         heartrateAdapter = new HeartrateAdapter(getApplication(), mainViewModel);
         recyclerView.setAdapter(heartrateAdapter);
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("CIS 3334", "MainActivity -- LiveData Observer -- Number of Pizzas = "+allHeartrates.size());
                 editTextDisplay.setText("Number of heartrates = "+allHeartrates.size());
                 // TODO: update the RecycleView Array Adapter
-                heartrateAdapter
+                heartrateAdapter.notifyDataSetChanged();
             }
         });
     }
