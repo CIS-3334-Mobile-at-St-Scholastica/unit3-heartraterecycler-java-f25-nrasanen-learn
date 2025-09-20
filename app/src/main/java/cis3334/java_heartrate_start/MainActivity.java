@@ -3,7 +3,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     // TODO: In Unit 5 will will replace the editText with a RecycleView
     Button buttonInsert;
     MainViewModel mainViewModel;
+    RecyclerView recyclerView;
+    HeartrateAdapter heartrateAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
         setupInsertButton();            // Set up the OnClickListener for the insert button
         setupLiveDataObserver();
+
+        recyclerView = findViewById(R.id.);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        heartrateAdapter = new HeartrateAdapter(getApplication(), mainViewModel);
+        recyclerView.setAdapter(heartrateAdapter);
     }
 
     private void setupLiveDataObserver() {
@@ -44,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("CIS 3334", "MainActivity -- LiveData Observer -- Number of Pizzas = "+allHeartrates.size());
                 editTextDisplay.setText("Number of heartrates = "+allHeartrates.size());
                 // TODO: update the RecycleView Array Adapter
+                heartrateAdapter
             }
         });
     }
