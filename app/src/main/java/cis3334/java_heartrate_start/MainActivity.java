@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("CIS 3334", "MainActivity -- LiveData Observer -- Number of Pizzas = "+allHeartrates.size());
                 editTextDisplay.setText("Number of heartrates = "+allHeartrates.size());
                 // TODO: update the RecycleView Array Adapter
-                heartrateAdapter.notifyDataSetChanged();
+                heartrateAdapter.notifyDataSetChanged();  //
             }
         });
     }

@@ -21,6 +21,13 @@ public class HeartrateAdapter extends RecyclerView.Adapter<HeartrateViewHolder> 
         this.mainViewModel = mainViewModel;
     }
 
+    // code bellow is from ai
+    // I don't know what to do in the last part of step 5
+    public void setHeartrates(List<Heartrate> heartrates) {
+        this. = heartrates;
+        notifyDataSetChanged(); // refresh RecyclerView
+    }
+
     @NonNull
     @Override
     public HeartrateViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
